@@ -454,3 +454,179 @@ print(teams)
 
 # get functions
 
+teams = {
+  "astros": ["Altuve", "Correa", "Bregman"],
+  "angels": ["Trout", "Pujols"],
+  "yankees": ["Judge", "Stanton"],
+  "red sox": ['Price', 'Betts'],
+}
+
+featured_team = teams.get('yankees', 'No featured team')
+
+print(featured_team)
+
+# view objects in python dictionnaries
+
+players = {
+  "ss" : "Correa",
+  "2b" : "Altuve",
+  "3b" : "Bregman",
+  "DH" : "Gattis",
+  "OF" : "Springer",
+}
+
+# print(players.values())
+# print(players.keys())
+# print(players.items())
+# print(list(players.values())[1])
+players_names = list(players.copy().values())
+print(players_names)
+
+teams = {
+  "astros" : ["Altuve", "Correa", "Bregman"],
+  "angels":  ["Trout", "Pujols"],
+  "yankees": ["Judge", "Stanton"],
+  "red sox": ["Price", "Betts"],
+}
+
+team_groups = teams.items()
+
+print(len(team_groups))
+print(list(team_groups)[1][1][0])
+
+# deleting items in python dictionnaries
+
+teams = {
+  "astros" : ["Altuve", "Correa", "Bregman"],
+  "angels":  ["Trout", "Pujols"],
+  "yankees": ["Judge", "Stanton"],
+  "red sox": ["Price", "Betts"],
+}
+
+del teams['angels']
+removed_team = teams.pop('mets', 'Team not found')
+
+print(teams)
+print(removed_team)
+
+# working with lists of nested dictionnaries
+
+teams = [
+  {
+    'astros': {
+      '2B': 'Altuve',
+      'SS': 'Correa',
+      '3B': 'Bregman',
+    }
+  },
+  {
+    'angels': {
+      'OF': 'Trout',
+      'DH': 'Pujols',
+    }
+  }
+]
+
+# print(teams[0])
+
+team_num = teams[1].get('angels', 'team not found')
+
+print(list(team_num.values())[1])
+
+# Build Histogram in python
+
+"""
+g $$$$$$$$$$$$$$$$$$$$
+f $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+t $$$$$$$$$$
+o $$$$$$$$$$$$
+"""
+
+sales = {
+  'google': 20,
+  'facebook': 42,
+  'twitter': 10,
+  'offline': 12,
+}
+
+print('g ' + sales['google'] * '$')
+print('f ' + sales['facebook'] * '$')
+print('t ' + sales['twitter'] * '$')
+print('o ' + sales['offline'] * '$')
+
+# introduction to Tuples
+
+# List: []
+# Dictionary: {}
+# Tuple: ()
+
+# Tuple: immutable it can not be changed
+# List: mutable
+
+post = ('Python Basics', 'Intro guide to python', 'Some cool python content')
+
+# Tuple unpacking
+title, sub_heading, content = post
+
+# Equivalent to Tuple unpacking
+# title = post[0]
+# sub_heading = post[1]
+# content = post[2]
+
+print(title)
+print(sub_heading)
+print(content)
+
+# add elements to a tuble
+
+post = ('Python Basics', 'Intro guide to python', 'Some cool python content')
+
+print(id(post))
+print(id(post))
+
+post += ('published',)
+
+print(id(post))
+
+title, sub_heading, content, status = post
+
+print(title)
+print(sub_heading)
+print(content)
+print(status)
+
+# working with lists nested in Tuples
+
+
+post = ('Python Basics', 'Intro guide to Python', 'Some cool python content')
+
+tags = ['python', 'coding', 'tutorial']
+
+post += (tags,)
+
+print(post[-1][1])
+
+
+
+# guide to slices in Tuples
+
+post = ('Python Basics', 'Intro guide to Python', 'Some cool python content', 'published')
+
+print(post[1::2])
+
+# remove elements from python Tuple
+
+post = ('Python Basics', 'Intro guide to Python', 'Some cool python content', 'published')
+
+# Removing elements from end
+post = post[:-1]
+
+# Removing elements from beginning
+post = post[1:]
+
+# Removing specific element (messy/not recommended)
+post = list(post)
+post.remove('published')
+post = tuple(post)
+
+print(post)
