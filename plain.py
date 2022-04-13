@@ -1,11 +1,11 @@
-import sys
+# import sys
 
-sys.path.insert(0, "./libs")
+# sys.path.insert(0, "../libs")
 
-import helper
+# import helper
 
 
-def rendor():
-    print(helper.greeting('sumaya', 'mohamed'))
+# def rendor():
+#     print(helper.greeting('sumaya', 'mohamed'))
 
-rendor()
+# rendor()
