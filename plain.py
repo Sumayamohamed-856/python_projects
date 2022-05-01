@@ -1,11 +1,16 @@
-# import sys
+import sys
 
-# sys.path.insert(0, "../libs")
+sys.path.insert(0, './libs')
 
-# import helper
+import helper as h
 
 
-# def rendor():
-#     print(helper.greeting('sumaya', 'mohamed'))
+def rendor():
+    print(h.greeting('sumaya', 'mohamed'))
 
-# rendor()
+rendor()
+
+# from math import sqrt
+
+# math = sqrt(4)
+

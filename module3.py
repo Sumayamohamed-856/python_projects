@@ -511,3 +511,30 @@ def greeting(name):
 greeting(full_name('Kristine', 'Hudgens'))
 
 
+# Introduction to numpy package in python
+
+# import numpy as np
+
+# num_range = np.arange(16)
+
+# num_range
+
+# array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15])
+
+# num_range.reshape(4, 4)
+
+# # array([[ 0,  1,  2,  3],
+#          [ 4,  5,  6,  7],
+#          [ 8,  9, 10, 11],
+#          [12, 13, 14, 15]])
+
+
+# overview of python packages requests
+
+# import requests
+# import pprint
+
+# r = requests.get('https://api.dailysmarty.com/posts')
+# r.json()
+# pprint.pprint(r.json()['posts'][0])
+# pprint.pprint(r.json()['posts'][0]['url_for_post'])
